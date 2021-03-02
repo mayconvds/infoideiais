@@ -3,6 +3,9 @@
 
 function calcularArea(int $n): int
 {
+    if (!is_int($n)){
+        throw new Exception("Apenas números são permitidos");
+    }
     $valorOriginal = $n * $n;
     $novoNumero = $n - 1;
     $novoNumero = $novoNumero * $novoNumero;
